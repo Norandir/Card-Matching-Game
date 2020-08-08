@@ -1,6 +1,16 @@
+/**
+ * This class is built to handle creating a random grid for the game.
+ * Once the grid is created, the code will load the values into each tile that needs to be assigned one.
+ *
+ * @author Sawyer Kole
+ * @version 1.0
+ * @since August 8, 2020
+ */
+
+
 import java.util.ArrayList;
 import java.util.Random;
-//FIXME: Add java doc for class
+
 public class GenerateRandomGrid {
 
     /*
@@ -10,7 +20,7 @@ public class GenerateRandomGrid {
 
     }
 
-    /*
+    /**
     * Generates pairs of integers starting from 1 and ending at numTiles/2
     * After generating pairs, the ArrayList acting as the grid has it's elements randomized
     * Finally, passes ArrayList grid back to caller
@@ -46,7 +56,7 @@ public class GenerateRandomGrid {
         return grid;
     }
 
-    /*
+    /**
     * Sets the values for tiles from a given ArrayList. Tiles are set Randomly from a randomly sorted Integer ArrayList
      */
     public void setTilesRandomly(ArrayList<Integer> tiles) { //FIXME: Replace ArrayList<Integer> with ArrayList<"Object"> once determined
