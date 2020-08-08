@@ -31,7 +31,7 @@ public class GenerateRandomGrid {
         int j;
         int x;
 
-        //Take a random number between 100 and 600 and randomly switch two array positions that many times
+        //Picks two random array positions and switches their values. This is done between 100 and 600 times.
         for (int i = 0; i < (rand.nextInt(501) + 100); i++) {
             k = rand.nextInt(numTiles);
             j = rand.nextInt(numTiles);
