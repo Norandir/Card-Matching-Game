@@ -28,5 +28,11 @@ public class MainActivity extends AppCompatActivity {
             timer.cancel(); //Terminate the timer thread
         }
     }
+
+    public void Win (){//call this function on card click
+        //if (all matches have been made){
+        //switch to win screen
+        //}
+    }
    
 }
