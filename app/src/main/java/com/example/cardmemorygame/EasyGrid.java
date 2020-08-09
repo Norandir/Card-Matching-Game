@@ -24,9 +24,17 @@ public class EasyGrid extends AppCompatActivity {
      * GenerateRandomGrid then handles setting all the tiles numbers randomly
      */
     private void setTileNumbers() {
+        addTilesToArray();
+        GenerateRandomGrid gen = new GenerateRandomGrid();
+        tileNumbers = gen.setTilesRandomly(tiles);
+    }
+
+    /**
+     * Adds all the tiles for the given grid into an ArrayList
+     */
+    private void addTilesToArray() {
         Button button;
 
-        //Adds references for all the tiles to an ArrayList
         tiles.add((button = findViewById(R.id.card_1)));
         tiles.add((button = findViewById(R.id.card_2)));
         tiles.add((button = findViewById(R.id.card_3)));
@@ -43,8 +51,5 @@ public class EasyGrid extends AppCompatActivity {
         tiles.add((button = findViewById(R.id.card_14)));
         tiles.add((button = findViewById(R.id.card_15)));
         tiles.add((button = findViewById(R.id.card_16)));
-
-        GenerateRandomGrid gen = new GenerateRandomGrid();
-        tileNumbers = gen.setTilesRandomly(tiles);
     }
 }
