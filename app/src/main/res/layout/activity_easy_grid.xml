@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EasyGrid">
+
+    <Button
+        android:id="@+id/card_16"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="154dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_15"
+        app:layout_constraintTop_toBottomOf="@+id/card_12" />
+
+    <Button
+        android:id="@+id/card_15"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="154dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_16"
+        app:layout_constraintStart_toEndOf="@+id/card_14"
+        app:layout_constraintTop_toBottomOf="@+id/card_11" />
+
+    <Button
+        android:id="@+id/card_14"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="154dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_15"
+        app:layout_constraintStart_toEndOf="@+id/card_13"
+        app:layout_constraintTop_toBottomOf="@+id/card_10" />
+
+    <Button
+        android:id="@+id/card_6"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_10"
+        app:layout_constraintEnd_toStartOf="@+id/card_7"
+        app:layout_constraintStart_toEndOf="@+id/card_5"
+        app:layout_constraintTop_toBottomOf="@+id/card_2" />
+
+    <Button
+        android:id="@+id/card_9"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_5" />
+
+    <Button
+        android:id="@+id/card_10"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_11"
+        app:layout_constraintStart_toEndOf="@+id/card_9"
+        app:layout_constraintTop_toBottomOf="@+id/card_6" />
+
+    <Button
+        android:id="@+id/card_11"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_12"
+        app:layout_constraintStart_toEndOf="@+id/card_10"
+        app:layout_constraintTop_toBottomOf="@+id/card_7" />
+
+    <Button
+        android:id="@+id/card_12"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_11"
+        app:layout_constraintTop_toBottomOf="@+id/card_8" />
+
+    <Button
+        android:id="@+id/card_8"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_7"
+        app:layout_constraintTop_toBottomOf="@+id/card_4" />
+
+    <Button
+        android:id="@+id/card_5"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_9"
+        app:layout_constraintEnd_toStartOf="@+id/card_6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_1" />
+
+    <Button
+        android:id="@+id/card_4"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/card_1"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_5"
+        app:layout_constraintEnd_toStartOf="@+id/card_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/card_3"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_7"
+        app:layout_constraintEnd_toStartOf="@+id/card_4"
+        app:layout_constraintStart_toEndOf="@+id/card_2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/card_2"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_6"
+        app:layout_constraintEnd_toStartOf="@+id/card_3"
+        app:layout_constraintStart_toEndOf="@+id/card_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/card_7"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_11"
+        app:layout_constraintEnd_toStartOf="@+id/card_8"
+        app:layout_constraintStart_toEndOf="@+id/card_6"
+        app:layout_constraintTop_toBottomOf="@+id/card_3" />
+
+    <Button
+        android:id="@+id/card_13"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="154dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
