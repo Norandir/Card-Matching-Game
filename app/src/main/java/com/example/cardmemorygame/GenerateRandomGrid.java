@@ -29,7 +29,7 @@ public class GenerateRandomGrid {
      */
     private ArrayList<Integer> generateGrid(int numTiles) {
         //ArrayList to hold integers for the grid
-        ArrayList<Integer> grid = new ArrayList<Integer>;
+        ArrayList<Integer> grid = new ArrayList<Integer>();
 
         //Generates pairs of integers
         for (int i = 0; i < numTiles/2; i++) {
@@ -61,11 +61,12 @@ public class GenerateRandomGrid {
     /**
     * Sets the values for tiles from a given ArrayList. Tiles are set Randomly from a randomly sorted Integer ArrayList
      */
-    public void setTilesRandomly(ArrayList<Button> tiles) {
+    public ArrayList<Integer> setTilesRandomly(ArrayList<Button> tiles) {
         ArrayList<Integer> grid = generateGrid(tiles.size());
 
         for (int i = 0; i < tiles.size(); i++) {
             tiles.get(i).setText(Integer.toString(grid.get(i)));
         }
+        return grid;
     }
 }
