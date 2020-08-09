@@ -8,6 +8,8 @@
  */
 
 
+import android.widget.Button;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -59,11 +61,11 @@ public class GenerateRandomGrid {
     /**
     * Sets the values for tiles from a given ArrayList. Tiles are set Randomly from a randomly sorted Integer ArrayList
      */
-    public void setTilesRandomly(ArrayList<Integer> tiles) { //FIXME: Replace ArrayList<Integer> with ArrayList<"Object"> once determined
+    public void setTilesRandomly(ArrayList<Button> tiles) {
         ArrayList<Integer> grid = generateGrid(tiles.size());
 
         for (int i = 0; i < tiles.size(); i++) {
-            //tiles.get(i).setText(Integer.toString(grid.get(i))); //FIXME: Fix code to work once the FIXME above is fixed.
+            tiles.get(i).setText(Integer.toString(grid.get(i)));
         }
     }
 }
