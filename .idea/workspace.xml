@@ -128,6 +128,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1069" y="559" width="424" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597009443747">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1069" y="559" width="424" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.142.1920.1040/2560.237.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1597009443747" />
     <state x="1027" y="414" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1596897582325">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

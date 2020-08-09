@@ -1,4 +1,4 @@
-/**
+package com.example.cardmemorygame; /**
  * This class is built to handle creating a random grid for the game.
  * Once the grid is created, the code will load the values into each tile that needs to be assigned one.
  *
