@@ -3,6 +3,7 @@ package com.example.cardmemorygame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
@@ -51,5 +52,22 @@ public class EasyGrid extends AppCompatActivity {
         tiles.add((button = findViewById(R.id.card_14)));
         tiles.add((button = findViewById(R.id.card_15)));
         tiles.add((button = findViewById(R.id.card_16)));
+    }
+
+    /**
+     * onClick handler for buttons. Makes the button invisible (revealing the image underneath)
+     * if image was visible & vice versa. Also re-hides buttons if more than two are revealed.
+     * @param view
+     */
+    public void CycleVisibility(View view) {
+
+        int isVisible = view.getVisibility();
+
+        if (isVisible == View.VISIBLE) {
+            view.setVisibility(View.INVISIBLE);
+        } else if (isVisible == View.INVISIBLE) {
+            view.setVisibility(View.VISIBLE);
+        }
+
     }
 }
