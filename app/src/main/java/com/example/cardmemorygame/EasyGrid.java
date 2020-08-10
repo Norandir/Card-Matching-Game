@@ -12,6 +12,7 @@ public class EasyGrid extends AppCompatActivity {
 
     private ArrayList<Button> tiles = new ArrayList<Button>(); //Array that holds references to all the tiles
     private ArrayList<Integer> tileNumbers = new ArrayList<Integer>(); //Array that holds numbers for all tiles
+    private int tilesClicked = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,11 +64,23 @@ public class EasyGrid extends AppCompatActivity {
 
         int isVisible = view.getVisibility();
 
-        if (isVisible == View.VISIBLE) {
-            view.setVisibility(View.INVISIBLE);
-        } else if (isVisible == View.INVISIBLE) {
-            view.setVisibility(View.VISIBLE);
-        }
+        tilesClicked++;
 
+        if (tilesClicked <= 2) {
+
+            if (isVisible == View.VISIBLE) {
+                view.setVisibility(View.INVISIBLE);
+            }
+            else if (isVisible == View.INVISIBLE) {
+                view.setVisibility(View.VISIBLE);
+            }
+        } else {
+
+            for (int i = 0; i < tiles.size(); i++) {
+                tiles.get(i).setVisibility(View.VISIBLE);
+            }
+
+            tilesClicked = 0;
+        }
     }
 }
