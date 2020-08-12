@@ -5,6 +5,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,9 +31,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Win (){//call this function on card click
-        //if (all matches have been made){
-        //switch to win screen
-        //}
+        int count = 0;
+        for (int i = 0; i < tiles.size(); i++) {
+            if (tiles.get(i).getVisablity() == View.INVISIBLE){
+                count++;
+            }
+            if (count == 16){
+                //Show win
+            }
+        }
     }
    
 }
