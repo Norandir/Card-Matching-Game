@@ -5,6 +5,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     Timer timer;
@@ -24,9 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
     class game extends TimerTask{
         public void run() {
-            //Add code to start game
+            for (int i = 0; i < tiles.size(); i++) {
+                tiles.get(i).setVisibility(View.VISIBLE);
+            }
             timer.cancel(); //Terminate the timer thread
         }
     }
-   
+
+
 }
