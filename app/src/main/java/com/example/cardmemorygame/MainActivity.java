@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -16,13 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    Timer timer;
 
-    public void hint (){
 
-        timer = new Timer();
-        timer.schedule(new game(), 5000); //after 5 seconds timer will call method to start game
+    public void launchEasyGrid(View view) {
+        Intent intent = new Intent(this, EasyGrid.class);
+        startActivity(intent);
     }
+
 
     class game extends TimerTask{
         public void run() {
@@ -32,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
             timer.cancel(); //Terminate the timer thread
         }
     }
+
+
+
+   
 
 
 }
