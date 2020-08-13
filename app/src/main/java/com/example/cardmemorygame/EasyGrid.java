@@ -93,7 +93,7 @@ public class EasyGrid extends AppCompatActivity {
 
     private void Hint(){
         try {
-            TimeUnit.MILLISECONDS.sleep(1000);
+            TimeUnit.MILLISECONDS.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
