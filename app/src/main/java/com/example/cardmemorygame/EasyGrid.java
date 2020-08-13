@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.widget.Toast;
@@ -12,6 +13,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -27,6 +30,13 @@ public class EasyGrid extends AppCompatActivity {
 
     private ArrayList<Integer> pairNumbersDone = new ArrayList<Integer>();
     private int tilesClicked = 0;
+    private int strikes = 0;
+    private int tileNumberToMatch;
+    private int firstClickedIndex = -1;
+    private int secondIndexToClick = -1;
+    private View incorrectButton1;
+    private View incorrectButton2;
+    private boolean matchFound = false;
 
 
     @Override
@@ -1792,22 +1802,75 @@ public class EasyGrid extends AppCompatActivity {
 
         int isVisible = view.getVisibility();
 
+        if (isVisible == view.VISIBLE) {
+            view.setVisibility(View.INVISIBLE);
+        }
 
 
-        if (tilesClicked < 2) {
 
-            if (isVisible == View.VISIBLE) {
-                view.setVisibility(View.INVISIBLE);
-                tilesClicked++;
+        //Win();
+
+        if (firstClickedIndex == -1) {
+            Log.d("Cyclevisibility for", "if entered");
+
+            if (incorrectButton1 != null) {
+                incorrectButton1.setVisibility(View.VISIBLE);
+                incorrectButton2.setVisibility(View.VISIBLE);
             }
-        } else {
 
             for (int i = 0; i < tiles.size(); i++) {
-                tiles.get(i).setVisibility(View.VISIBLE);
+                if (tiles.get(i) == view) {
+                    firstClickedIndex = i;
+                    tileNumberToMatch = tileNumbers.get(i);
+                    for (int k = tileNumbers.size() - 1; k >= 0; k--) {
+                        if (tileNumberToMatch == tileNumbers.get(k) && k != i) {
+                            secondIndexToClick = k;
+                        }
+                    }
+                    Log.d("CycleVisibility for", "Match found in IDs at index " + i + ". firstClickedIndex is now " + firstClickedIndex + ", and the tile number to match is " + tileNumberToMatch + ". Second index needed to be a correct match is " + secondIndexToClick);
+                }
+            }
+        } else {
+            Log.d("CycleVisibility for", "else entered");
+            for (int i = 0; i < tiles.size(); i++) {
+                if (tiles.get(i) == view && i == secondIndexToClick) {
+                    Log.d("CycleVisibility for", "Correct second tile clicked: " + secondIndexToClick);
+                    matchFound = true;
+                    break;
+                }
             }
 
-            tilesClicked = 0;
+            if (!matchFound) {
+                Toast toast = Toast.makeText(this, "Those two cards did not match. +1 strike.", Toast.LENGTH_LONG);
+                toast.show();
+                //view.setVisibility(View.VISIBLE);
+                incorrectButton1 = view;
+                incorrectButton2 = tiles.get(firstClickedIndex);
+                countStrikes();
+            }
+
+            firstClickedIndex = -1;
+            secondIndexToClick = -1;
+            matchFound = false;
         }
+    }
+
+    private void countStrikes() {
+        strikes++;
+
+        TextView strikeCounter = findViewById(R.id.strikeCounter);
+        strikeCounter.setText("Incorrect Matches: " + strikes + "/3");
+
+        if (strikes == 3) {
+            launchLoseActivity();
+            //lose++;
+        }
+
+    }
+
+    public void launchLoseActivity() {
+        Intent intent = new Intent(this, LoseActivity.class);
+        startActivity(intent);
     }
 }
 
