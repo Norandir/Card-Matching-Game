@@ -2,7 +2,9 @@ package com.example.cardmemorygame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    int wins = 0;
-    int loses = 0;
+
+    public void launchEasyGrid(View view) {
+        Intent intent = new Intent(this, EasyGrid.class);
+        startActivity(intent);
+    }
 }
