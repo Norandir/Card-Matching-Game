@@ -23,11 +23,12 @@ public class CountDownTimer extends Thread{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        while (time > 0) {
+        while (time >= 0) {
             time = time - 1;
             //FIXME: Set timer view to equal time
             if (time == 0) {
                 //FIXME: Fire lose condition because time is up
+                break;
             } else {
                 try {
                     TimeUnit.MILLISECONDS.sleep(1000);
