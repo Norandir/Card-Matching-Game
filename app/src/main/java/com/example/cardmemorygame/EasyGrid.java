@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class EasyGrid extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class EasyGrid extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy_grid);
         setTileNumbers();
+        Hint();
     }
 
     /**
@@ -74,4 +76,14 @@ public class EasyGrid extends AppCompatActivity {
     }
 
 
+    private void Hint(){
+        try {
+            TimeUnit.MILLISECONDS.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        for (int i = 0; i < tiles.size(); i++) {
+            tiles.get(i).setVisibility(View.VISIBLE);
+        }
+    }
 }
