@@ -3,7 +3,9 @@ package com.example.cardmemorygame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -11,6 +13,8 @@ public class EasyGrid extends AppCompatActivity {
 
     private ArrayList<Button> tiles = new ArrayList<Button>(); //Array that holds references to all the tiles
     private ArrayList<Integer> tileNumbers = new ArrayList<Integer>(); //Array that holds numbers for all tiles
+    private int win = 0;
+    private int lose = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,4 +56,20 @@ public class EasyGrid extends AppCompatActivity {
         tiles.add((button = findViewById(R.id.card_15)));
         tiles.add((button = findViewById(R.id.card_16)));
     }
+
+    private void Win (){//call this function on card click
+        int count = 0;
+        for (int i = 0; i < tiles.size(); i++) {
+            if (tiles.get(i).getVisibility() == View.INVISIBLE){
+                count++;
+            }
+            if (count == 16){
+                Toast toast = Toast.makeText(this, "You WIN! score = Win " + win + " " + " Lose " + lose,
+                        Toast.LENGTH_LONG);
+                toast.show();
+            }
+        }
+    }
+
+
 }
