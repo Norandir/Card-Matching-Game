@@ -16,7 +16,6 @@ public class EasyGrid extends AppCompatActivity {
 
     private ArrayList<Button> tiles = new ArrayList<Button>(); //Array that holds references to all the tiles
     private ArrayList<Integer> tileNumbers = new ArrayList<Integer>(); //Array that holds numbers for all tiles
-    private ArrayList<ImageView> images = new ArrayList<ImageView>();
     private ArrayList<Integer> pairNumbersDone = new ArrayList<Integer>();
     private int tilesClicked = 0;
 
@@ -66,8 +65,6 @@ public class EasyGrid extends AppCompatActivity {
      * Moves images onto their corresponding tile numbers.
      */
     private void assignImages() {
-        // First moves images into the image array.
-        addImagesToArray();
         // Variables to track the tile pair being found and the indices of the pair's locations.
         int pairNumber;
         int number1Index = 0;
@@ -75,7 +72,6 @@ public class EasyGrid extends AppCompatActivity {
         // Objects to change the constraints of the images.
         ConstraintLayout constraintLayout = findViewById(R.id.parent_layout);
         ConstraintSet constraintSet = new ConstraintSet();
-        constraintSet.clone(constraintLayout);
         // Loops through the tile numbers array, first finding the tile number at the current index.
         for (int i = 0; i < tileNumbers.size(); i++) {
             boolean pairDone = false;
@@ -1743,30 +1739,6 @@ public class EasyGrid extends AppCompatActivity {
             }
             pairDone = false;
         }
-    }
-
-    /**
-     * Adds all the images into an ArrayList
-     */
-    private void addImagesToArray() {
-        ImageView image;
-
-        images.add((image = findViewById(R.id.cardimg1_1)));
-        images.add((image = findViewById(R.id.cardimg1_2)));
-        images.add((image = findViewById(R.id.cardimg2_1)));
-        images.add((image = findViewById(R.id.cardimg2_2)));
-        images.add((image = findViewById(R.id.cardimg3_1)));
-        images.add((image = findViewById(R.id.cardimg3_2)));
-        images.add((image = findViewById(R.id.cardimg4_1)));
-        images.add((image = findViewById(R.id.cardimg4_2)));
-        images.add((image = findViewById(R.id.cardimg5_1)));
-        images.add((image = findViewById(R.id.cardimg5_2)));
-        images.add((image = findViewById(R.id.cardimg6_1)));
-        images.add((image = findViewById(R.id.cardimg6_2)));
-        images.add((image = findViewById(R.id.cardimg7_1)));
-        images.add((image = findViewById(R.id.cardimg7_2)));
-        images.add((image = findViewById(R.id.cardimg8_1)));
-        images.add((image = findViewById(R.id.cardimg8_2)));
     }
 
     /**
