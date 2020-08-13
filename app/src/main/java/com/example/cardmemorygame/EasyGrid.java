@@ -35,8 +35,12 @@ public class EasyGrid extends AppCompatActivity {
         setContentView(R.layout.activity_easy_grid);
         setTileNumbers();
         assignImages();
-        Hint();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Hint();
     }
 
     /**
@@ -92,16 +96,33 @@ public class EasyGrid extends AppCompatActivity {
 
 
     private void Hint(){
-        try {
-            TimeUnit.MILLISECONDS.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        for (int i = 0; i < tiles.size(); i++) {
-            tiles.get(i).setVisibility(View.VISIBLE);
-        }
+        Thread thread = new Thread() {
+            public void run() {
+                for (int i = 0; i < tiles.size(); i++) {
+                    tiles.get(i).setVisibility(View.INVISIBLE);
+                    Log.e("Hint","Tiles Invisible");
+                }
+                try {
+                    TimeUnit.MILLISECONDS.sleep(5000);
+                } catch (InterruptedException e) {
+                    Log.d("Hint","TimerFailed");
+                    e.printStackTrace();
+                }
+                for (int k = 0; k < tiles.size(); k++) {
+                    final int j = k;
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            tiles.get(j).setVisibility(View.VISIBLE);
+                        }
+                    });
+
+                    Log.e("Hint","Tiles Visible");
+                }
+            }
+        };
+        thread.start();
     }
-}
 
     /**
      * Moves images onto their corresponding tile numbers.

@@ -64,9 +64,12 @@ public class GenerateRandomGrid {
     public ArrayList<Integer> setTilesRandomly(ArrayList<Button> tiles) {
         ArrayList<Integer> grid = generateGrid(tiles.size());
 
+        /*
         for (int i = 0; i < tiles.size(); i++) {
             tiles.get(i).setText(Integer.toString(grid.get(i)));
         }
+        */
+
         return grid;
     }
 }
