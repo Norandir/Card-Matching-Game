@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EasyGrid">
@@ -231,7 +232,7 @@
         app:layout_constraintTop_toBottomOf="@+id/card_9" />
 
     <ImageView
-        android:id="@+id/card1img"
+        android:id="@+id/cardimg1_1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -247,7 +248,7 @@
         app:srcCompat="@android:drawable/ic_menu_always_landscape_portrait" />
 
     <ImageView
-        android:id="@+id/card2img"
+        android:id="@+id/cardimg1_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -263,7 +264,7 @@
         app:srcCompat="@android:drawable/ic_menu_always_landscape_portrait" />
 
     <ImageView
-        android:id="@+id/card3img"
+        android:id="@+id/cardimg2_1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -279,7 +280,7 @@
         app:srcCompat="@android:drawable/ic_menu_call" />
 
     <ImageView
-        android:id="@+id/card4img"
+        android:id="@+id/cardimg2_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -295,7 +296,7 @@
         app:srcCompat="@android:drawable/ic_menu_call" />
 
     <ImageView
-        android:id="@+id/card5img"
+        android:id="@+id/cardimg3_1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -311,7 +312,7 @@
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
     <ImageView
-        android:id="@+id/card6img"
+        android:id="@+id/cardimg3_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -327,7 +328,7 @@
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
     <ImageView
-        android:id="@+id/card7img"
+        android:id="@+id/cardimg4_1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -343,7 +344,7 @@
         app:srcCompat="@android:drawable/ic_menu_compass" />
 
     <ImageView
-        android:id="@+id/card8img"
+        android:id="@+id/cardimg4_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -359,7 +360,7 @@
         app:srcCompat="@android:drawable/ic_menu_compass" />
 
     <ImageView
-        android:id="@+id/card9img"
+        android:id="@+id/cardimg5_1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -375,7 +376,7 @@
         app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <ImageView
-        android:id="@+id/card10img"
+        android:id="@+id/cardimg5_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -391,7 +392,7 @@
         app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <ImageView
-        android:id="@+id/card11img"
+        android:id="@+id/cardimg6_1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -407,7 +408,7 @@
         app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <ImageView
-        android:id="@+id/card12img"
+        android:id="@+id/cardimg6_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -423,7 +424,7 @@
         app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <ImageView
-        android:id="@+id/card13img"
+        android:id="@+id/cardimg7_1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -439,7 +440,7 @@
         app:srcCompat="@android:drawable/ic_menu_manage" />
 
     <ImageView
-        android:id="@+id/card14img"
+        android:id="@+id/cardimg7_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -455,7 +456,7 @@
         app:srcCompat="@android:drawable/ic_menu_manage" />
 
     <ImageView
-        android:id="@+id/card15img"
+        android:id="@+id/cardimg8_1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -471,7 +472,7 @@
         app:srcCompat="@android:drawable/ic_menu_send" />
 
     <ImageView
-        android:id="@+id/card16img"
+        android:id="@+id/cardimg8_2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
