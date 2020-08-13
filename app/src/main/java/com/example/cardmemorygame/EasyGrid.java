@@ -64,9 +64,11 @@ public class EasyGrid extends AppCompatActivity {
                 count++;
             }
             if (count == 16){
+                win++;
                 Toast toast = Toast.makeText(this, "You WIN! score = Win " + win + " " + " Lose " + lose,
                         Toast.LENGTH_LONG);
                 toast.show();
+
             }
         }
     }
