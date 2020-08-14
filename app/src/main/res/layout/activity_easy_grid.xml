@@ -487,4 +487,15 @@
         app:layout_constraintTop_toTopOf="@id/card_16"
         app:srcCompat="@android:drawable/ic_menu_send" />
 
+    <TextView
+        android:id="@+id/strikeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:text="Incorrect Matches: 0/3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
