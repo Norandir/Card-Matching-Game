@@ -100,6 +100,8 @@ public class EasyGrid extends AppCompatActivity {
                         Toast.LENGTH_LONG);
                 toast.show();
 
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
             }
         }
     }
