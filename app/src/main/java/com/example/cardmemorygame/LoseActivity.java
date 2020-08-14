@@ -1,15 +1,13 @@
 package com.example.cardmemorygame;
 
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class LoseActivity extends AppCompatActivity {
 
     private int win = 0;
     private int lose = 0;
@@ -17,18 +15,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_lose);
         Intent intent = getIntent();
         win = intent.getIntExtra("Wins", 0);
         lose = intent.getIntExtra("Losses", 0);
     }
 
-    public void launchEasyGrid(View view) {
-        Intent intent = new Intent(this, EasyGrid.class);
+    public void launchMainActivity(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("Wins", win);
         intent.putExtra("Losses", lose);
         startActivity(intent);
     }
-
 
 }
