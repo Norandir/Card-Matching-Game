@@ -2,4 +2,5 @@
     <string name="app_name">Card Memory Game</string>
     <string name="start_text">Start</string>
     <string name="title_text">Card Memory Game</string>
+    <string name="you_lost_press_the_restart_button_to_go_back_to_the_main_menu">You Lost! Press the restart button to go back to the main menu.</string>
 </resources>

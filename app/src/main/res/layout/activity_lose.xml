@@ -15,7 +15,7 @@
         android:layout_marginTop="252dp"
         android:layout_marginEnd="22dp"
         android:layout_marginRight="22dp"
-        android:text="You Lost! Press the restart button to go back to the main menu."
+        android:text="@string/you_lost_press_the_restart_button_to_go_back_to_the_main_menu"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,5 +37,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loseText" />
+        app:layout_constraintTop_toBottomOf="@+id/loseText"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

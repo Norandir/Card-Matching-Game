@@ -110,12 +110,10 @@ public class EasyGrid extends AppCompatActivity {
             public void run() {
                 for (int i = 0; i < tiles.size(); i++) {
                     tiles.get(i).setVisibility(View.INVISIBLE);
-                    Log.e("Hint","Tiles Invisible");
                 }
                 try {
                     TimeUnit.MILLISECONDS.sleep(5000);
                 } catch (InterruptedException e) {
-                    Log.d("Hint","TimerFailed");
                     e.printStackTrace();
                 }
                 for (int k = 0; k < tiles.size(); k++) {
@@ -126,8 +124,6 @@ public class EasyGrid extends AppCompatActivity {
                             tiles.get(j).setVisibility(View.VISIBLE);
                         }
                     });
-
-                    Log.e("Hint","Tiles Visible");
                 }
             }
         };
@@ -1829,7 +1825,7 @@ public class EasyGrid extends AppCompatActivity {
 
 
 
-        //Win();
+        Win();
 
         if (firstClickedIndex == -1) {
             Log.d("Cyclevisibility for", "if entered");
@@ -1884,7 +1880,7 @@ public class EasyGrid extends AppCompatActivity {
 
         if (strikes == 3) {
             launchLoseActivity();
-            //lose++;
+            lose++;
         }
 
     }
