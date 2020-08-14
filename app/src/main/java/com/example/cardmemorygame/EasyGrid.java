@@ -25,8 +25,8 @@ public class EasyGrid extends AppCompatActivity {
     private ArrayList<Button> tiles = new ArrayList<Button>(); //Array that holds references to all the tiles
     private ArrayList<Integer> tileNumbers = new ArrayList<Integer>(); //Array that holds numbers for all tiles
 
-    private int win = 0;
-    private int lose = 0;
+    private int win ;
+    private int lose;
 
     private ArrayList<Integer> pairNumbersDone = new ArrayList<Integer>();
     private int tilesClicked = 0;
@@ -45,6 +45,9 @@ public class EasyGrid extends AppCompatActivity {
         setContentView(R.layout.activity_easy_grid);
         setTileNumbers();
         assignImages();
+        Intent intent = getIntent();
+        win = intent.getIntExtra("Wins", 0);
+        lose = intent.getIntExtra("Losses", 0);
     }
 
     @Override
@@ -101,6 +104,8 @@ public class EasyGrid extends AppCompatActivity {
                 toast.show();
 
                 Intent intent = new Intent(this, MainActivity.class);
+                intent.putExtra("Wins", win);
+                intent.putExtra("Losses", lose);
                 startActivity(intent);
             }
         }
@@ -1889,6 +1894,8 @@ public class EasyGrid extends AppCompatActivity {
 
     public void launchLoseActivity() {
         Intent intent = new Intent(this, LoseActivity.class);
+        intent.putExtra("Wins", win);
+        intent.putExtra("Losses", lose);
         startActivity(intent);
     }
 }
